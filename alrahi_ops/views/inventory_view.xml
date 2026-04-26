@@ -1,0 +1,12 @@
+<odoo>
+    <record id="view_picking_form_inherit_alrahi_l3" model="ir.ui.view">
+        <field name="name">stock.picking.form.inherit.alrahi</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <field name="x_roast_quality" widget="statusbar" statusbar_visible="pending,passed,failed" options="{'clickable': '1'}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
