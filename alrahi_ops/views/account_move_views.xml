@@ -6,20 +6,20 @@
         <field name="arch" type="xml">
             
             <xpath expr="//field[@name='partner_id']" position="after">
-                <field name="x_customer_trn" placeholder="e.g. 100XXXXXXXXXXXX"/>
+                <field name="x_customer_trn"/>
                 <field name="x_delivery_type" widget="radio" options="{'horizontal': true}"/>
             </xpath>
 
             <xpath expr="//page[@name='other_info']" position="after">
                 <page string="Roastery Logistics" name="roastery_info">
                     <group>
-                        <group string="Batch Information">
+                        <group string="Production Metadata">
                             <field name="x_roast_date"/>
                             <field name="x_batch_no"/>
                         </group>
-                        <group string="Verification">
+                        <group string="Operational Approval">
                             <field name="x_quality_certified" widget="boolean_toggle"/>
-                            <field name="x_driver_id"/>
+                            <field name="x_driver_id" options="{'no_create': True}"/>
                         </group>
                     </group>
                 </page>
