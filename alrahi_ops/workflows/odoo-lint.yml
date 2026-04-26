@@ -1,0 +1,22 @@
+name: Odoo Module Check
+
+on: [push, pull_request]
+
+jobs:
+  odoo-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Odoo Linter
+        run: pip install pylint-odoo
+
+      - name: Run Linter Check
+        run: |
+          pylint --load-plugins=pylint_odoo -d all -e odoolint ./models/ ./views/
