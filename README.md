@@ -1,6 +1,6 @@
 ### Custom Odoo Suite  
-Blueprint Package for Enterprise Customization  This repository serves as a technical demo for customizing Odoo using Python-based model  and XML view definitions. 
-
+Blueprint Package for Enterprise Customization,  
+This repository serves as a technical demo for customizing Odoo using Python-based model  and XML view definitions. 
 ### Core Architecture
 Module Logic: Developed for Odoo 17.0+ using the native Python framework.  
 Frontend Design: XML-based   
